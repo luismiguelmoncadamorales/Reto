@@ -1,0 +1,29 @@
+<div class="col-2 col-lg-2 col-md-2 col-sm-2 offset-md-5 offset-sm-5 offset-lg-5 offset-5 d-flex justify-content-center">
+  <a [routerLink]="['/Listar']"><button class="btn btn-success btn-sm">Regresar</button></a>
+  <button (click)="logOut()" class="btn btn-success btn-sm ml-1 mb-1">Cerrar Sesión</button>
+</div>
+<div class="col-8 col-lg-8 col-md-8 col-sm-8 offset-md-2 offset-sm-2 offset-lg-2 offset-2">
+    <form (submit)="agregarRegistro(cedula,nombre,apellidos,correo,password)">
+        <div class="form-group">
+            <label for="city">Cedula:</label>
+            <input type="text" class="form-control" #cedula>
+          </div>
+    <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" class="form-control" #nombre>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Apellidos:</label>
+        <input type="text" class="form-control" #apellidos>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" #correo>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Contraseña:</label>
+      <input type="password" class="form-control" #password>
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
+</div>

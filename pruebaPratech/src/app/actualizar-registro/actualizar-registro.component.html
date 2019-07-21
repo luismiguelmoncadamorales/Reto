@@ -1,0 +1,30 @@
+<div class="col-2 col-lg-2 col-md-2 col-sm-2 offset-md-5 offset-sm-5 offset-lg-5 offset-5 d-flex justify-content-center">
+        <a [routerLink]="['/Listar']"><button class="btn btn-success btn-sm">Regresar</button></a>
+        <button (click)="logOut()" class="btn btn-success btn-sm ml-1 mb-1">Cerrar Sesión</button>
+      </div>
+      <div class="col-8 col-lg-8 col-md-8 col-sm-8 offset-md-2 offset-sm-2 offset-lg-2 offset-2">
+          
+            <div class="form-group">
+                <label for="">Cedula:</label>
+                <input [(ngModel)]="registro.cedula" type="number" class="form-control" name="cedula" id="cedula" disabled>
+              </div>
+          <div class="form-group">
+              <label for="">Nombre:</label>
+              <input [(ngModel)]="registro.nombre" type="text" class="form-control" name="nombre" id="nombre">
+          </div>
+          <div class="form-group">
+              <label for="">Apellido:</label>
+              <input [(ngModel)]="registro.apellidos" type="text" class="form-control" name="apellidos" id="lastName">
+          </div>
+          <div class="form-group">
+            <label for="">Email:</label>
+            <input [(ngModel)]="registro.correo" type="email" class="form-control" name="correo" id="email">
+          </div>
+          <div class="form-group">
+            <label for="">Contraseña:</label>
+            <input [(ngModel)]="registro.password" type="password" class="form-control" name="password" id="pwd">
+          </div>
+          <button  class="btn btn-primary" (click)="actualizarRegistro()">Actualizar</button>
+        
+      </div>
+      
